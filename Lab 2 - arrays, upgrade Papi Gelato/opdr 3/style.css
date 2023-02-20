@@ -1,0 +1,10 @@
+body{
+    background-image: url("muik.png");
+    background-size: 100% 700%;
+    background-repeat: no-repeat;
+}
+h1, h2, p{
+    margin: auto;
+    margin-left: 10%;
+    color: white;
+}
