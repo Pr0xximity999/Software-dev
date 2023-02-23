@@ -11,6 +11,4 @@ function addition(num1, num2){
 for(let i = 0; i < numbers; i++){
     sequence.push(addition(sequence[sequence.length - 1], sequence[sequence.length - 2]))
 }
-
 document.getElementById('text').innerHTML = sequence;
-
