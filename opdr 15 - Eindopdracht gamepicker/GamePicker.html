@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div id="main">
+        <div id="overview">
+            <h1 id="title">Overview</h1>
+            <div id="topButtons">
+                <div id="dropdownDiv">
+                    <div id="genreDiv">
+                        <label>Select a genre:</label>
+                        <select name="genres" id="genreDropdown">
+                            <option value="all">Everything</option>
+                        </select>
+                        <button id="genreOkButton">OK</button>
+                    </div>
+                    <div id="sortDiv">
+                        <label>Sort on:</label>
+                        <select name="sortOn" id="sortOn">
+                            <option value="name">Name</option>
+                            <option value="genre">Genre</option>
+                            <option value="price">Price</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                        <button id="sortOkButton">OK</button>
+                    </div>
+                    <div id="priceDiv">
+                        <label>Show below price:</label>
+                        <label id="priceLabel"> €</label>
+                        <input type="text" id="priceInput">
+                        <button id="priceOkButton">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div id="gameDiv">
+            </div>
+            <button id="doneButton">Done</button>
+        </div>
+    </div>
+
+    <script src="GamePicker.js"></script>
+</body>
+</html>
