@@ -219,13 +219,13 @@ function checkout() {
 
         literP.innerHTML = `Liter:         ${customer.iceNum} x &#8364;9.80   = &#8364;${customer.iceNum * 9.80}`
         plusP.innerHTML = '                         --------- +'
-        totalP.innerHTML = `Totaal:                 &#8364;${customer.totalIceNum * 9.80}`
-        btwP.innerHTML = `BTW(6%):                &#8364;${customer.totalIceNum * 9.80 * 0.06}`
+        totalP.innerHTML = `Totaal:                 &#8364;${customer.iceNum * 9.80}`
+        btwP.innerHTML = `BTW(9%):                &#8364;${customer.iceNum * 9.80 * 0.09}`
 
         document.getElementById('body').appendChild(literP)
         document.getElementById('body').appendChild(plusP)
         document.getElementById('body').appendChild(totalP)
-        document.getElementById('body').appendChild(totalP)
+        document.getElementById('body').appendChild(btwP)
     }
 
     goodbyeP = document.createElement('p')

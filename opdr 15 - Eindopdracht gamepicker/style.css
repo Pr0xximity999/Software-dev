@@ -1,5 +1,9 @@
+
 body{
-    background-color: black;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
 #title{
     padding-top: 1em;
@@ -7,21 +11,36 @@ body{
 #main{
     margin: 0 auto;
     width: 80%;
-    background-color: grey;
+    background-color: darkslategrey;
 }
 #overview{
     margin: 0 auto;
     width: 85%;
     padding-bottom: 1em;
 }
+#showFilterButton{
+    width: 4em;
+    height: 3em;
+    margin-left: 0.05em;
+    background-color: gray;
+    border: none;
+}
+#topButtons{
+    background-color: rgb(74, 121, 121);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border: 0.1em solid black;
+    border-bottom: 0.05em solid black;
+}
 #dropdownDiv{
+    font-size: 1.3em;
     height: 1.5em;
     padding-left: 2em;
     padding-right: 2em;
     display: flex;
     justify-content: space-between;
 }
-#genreDiv, #sortDiv, #priceDiv{
+#genreDiv, #priceDiv{
     height: 1.5em;
     display: flex;
     flex-direction: row;
@@ -29,13 +48,91 @@ body{
 #priceInput{
     width: 4em;
 }
+#filterOkButton{
+    width: 8em;
+}
 #gameDiv{
+    background-color: grey;
     height: 45em;
-    border: solid 1px black;
+    border: solid 0.1em black;
     overflow-x: hidden;
     overflow-y: auto;
 }
 #doneButton{
+    border: none;
+    background-color: slategray;
+    font-size: 1em;
     margin-top: 1em;
-    margin-left: 93%;
+    margin-left: 89%;
+    padding: 2em;
+}
+
+
+
+h1, h2{
+    font-size: 32px;
+}
+p, a, h1, h2, li, button{
+    font-family: sans-serif;
+}
+#maindiv{
+    margin: 0 auto;
+    width: 80%;
+}
+header{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+header > nav{
+    margin-left: 2em;
+    display: flex;
+    column-gap: 2em;
+}
+.headergame{
+    padding: 1em;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    row-gap: 1em;
+}
+.gameinfo{
+    display: flex;
+    column-gap: 1em;
+}
+#tags{
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+.tag{
+    padding: 1em;
+}
+.title{
+    padding-left: 1em;
+    flex: 2;
+}
+.information{
+    flex: 1;
+}
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1em;
+    padding: 1em;
+}
+.images > img{
+    width: 24%;
+}
+.requirements{
+    padding-left: 1em;
+}
+footer{
+    padding-left: 1em;
+}
+footer > div{
+    margin-bottom: 2em;
 }

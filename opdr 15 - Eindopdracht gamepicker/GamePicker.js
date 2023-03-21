@@ -194,9 +194,41 @@ var games = [
     }
 ];
 
+
+//Binds the sort button to an event
+var resetBtn = document.getElementById("filterResetButton");
+resetBtn.onclick = x =>{
+    document.getElementById("genreDropdown").value = "all";
+    document.getElementById("ratingDropdown").value = "5";
+    document.getElementById("priceInput").value = "100";
+    clear_game_list()
+    make_game_list(games)
+}
+var sortBtn = document.getElementById("filterOkButton");
+sortBtn.onclick = x => {
+    var gamesSorted = [];
+    var selGenre = document.getElementById("genreDropdown").value;
+    var selRating = document.getElementById("ratingDropdown").value;
+    var selPrice = document.getElementById("priceInput").value;
+
+    games.forEach(game => {
+        if (game.genre == selGenre ||  selGenre == "all") {
+            if (game.rating <= parseInt(selRating)) {
+                if (game.price <= parseInt(selPrice)) {
+                    gamesSorted.push(game);
+                }
+            }
+        }
+    });
+    console.log(games);
+    clear_game_list()
+    make_game_list(gamesSorted)
+}
+
 //The genre dropdown and list of genres already added
 var genreDropdown = document.getElementById("genreDropdown");
 var genres = [];
+var gameDivs = []
 
 //Adds all the genres to the dropdown menu
 games.forEach(game => {
@@ -208,6 +240,22 @@ games.forEach(game => {
         genres.push(game.genre);
     }
 })
+//Deciding wether the filter div is shown
+var filterDiv = document.getElementById("topButtons");
+filterDiv.hidden = true
+var filterBtn = document.getElementById("showFilterButton");
+filterBtn.onclick = x => {
+    if (!filterDiv.hidden) {
+        filterShown = false;
+        filterDiv.hidden = true;
+        filterBtn.style.border = "none";
+    }
+    else {
+        filterShown = true;
+        filterDiv.hidden = false;
+        filterBtn.style.border = "0.3em solid black";
+    }
+}
 
 //The div for the game list
 var gamesDiv = document.getElementById("gameDiv");
@@ -216,58 +264,65 @@ gamesDiv.style.flexDirection = "column";
 gamesDiv.style.rowGap = "1em";
 gamesDiv.style.padding = "1em";
 
-//Adds all the games to the list
-games.forEach(game => {
-    //The div for the total game
-    var totalDiv = document.createElement("div");
-    totalDiv.style.display = "flex";
-    totalDiv.style.width = "100%";
-    totalDiv.style.height = "3em";
-    totalDiv.style.backgroundColor = "darkgrey";
-    
-    //The button for adding it to your cart
-    var cartButton = document.createElement("button");
-    cartButton.innerHTML = "Add to cart";
-    
-    
-    //The div for the game name, rating and price
-    var gameInfoDiv = document.createElement("div");
-    gameInfoDiv.style.marginLeft = "1em";
-    gameInfoDiv.style.display = "flex";
-    gameInfoDiv.style.width = "100%";
-    gameInfoDiv.style.justifyContent = "space-between";
+make_game_list(games)
+function make_game_list(gameList) {
+    //Adds all the games to the list
+    gameList.forEach(game => {
+        //The div for the total game
+        var totalDiv = document.createElement("div");
+        totalDiv.style.display = "flex";
+        totalDiv.style.width = "100%";
+        totalDiv.style.height = "3em";
+        totalDiv.style.backgroundColor = "darkgrey";
 
-    //The game name paragraph
-    var gameName = document.createElement("p");
-    gameName.innerHTML = game.title;
+        //The button for adding it to your cart
+        var cartButton = document.createElement("button");
+        cartButton.innerHTML = "Add to cart";
 
 
-    //The game price and rating paragraph
-    var gameRatingPrice = document.createElement("p");
-    var price = 0;
-    var rating = "";
-    if (game.price == 0) {
-        price = "Free"
-    }
-    else {
-        price = "€" + game.price;
-    }
+        //The div for the game name, rating and price
+        var gameInfoDiv = document.createElement("div");
+        gameInfoDiv.style.marginLeft = "1em";
+        gameInfoDiv.style.display = "flex";
+        gameInfoDiv.style.width = "100%";
+        gameInfoDiv.style.justifyContent = "space-between";
 
-    if(game.rating == 1){
-        rating = "star";
-    }
-    else{
-        rating = "stars";
-    }
-    gameRatingPrice.innerHTML = `${game.rating} ${rating} - ${price}`;
-    gameRatingPrice.style.marginRight = "1em";
+        //The game name paragraph
+        var gameName = document.createElement("p");
+        gameName.innerHTML = game.title;
 
-    //Constructs the game div
-    gameInfoDiv.appendChild(gameName)
-    gameInfoDiv.appendChild(gameRatingPrice)
-    totalDiv.appendChild(cartButton)
-    totalDiv.appendChild(gameInfoDiv)
 
-    //Adds the game to the game list
-    gamesDiv.appendChild(totalDiv)
-})
+        //The game price and rating paragraph
+        var gameRatingPrice = document.createElement("p");
+        var price = 0;
+        var rating = "";
+        if (game.price == 0) {
+            price = "free"
+        }
+        else {
+            price = "€" + game.price;
+        }
+
+        if (game.rating == 1) {
+            rating = "star";
+        }
+        else {
+            rating = "stars";
+        }
+        gameRatingPrice.innerHTML = `${game.rating} ${rating} - ${price}`;
+        gameRatingPrice.style.marginRight = "1em";
+
+        //Constructs the game div
+        gameInfoDiv.appendChild(gameName)
+        gameInfoDiv.appendChild(gameRatingPrice)
+        totalDiv.appendChild(cartButton)
+        totalDiv.appendChild(gameInfoDiv)
+
+        //Adds the game to the game list
+        gamesDiv.appendChild(totalDiv)
+    })
+
+}
+function clear_game_list() {
+    gamesDiv.innerHTML = "";
+}

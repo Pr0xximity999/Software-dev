@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+    body{
+        background-color: black;
+    }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -8,6 +13,7 @@
     <div id="main">
         <div id="overview">
             <h1 id="title">Overview</h1>
+            <button id="showFilterButton">Filter</button>
             <div id="topButtons">
                 <div id="dropdownDiv">
                     <div id="genreDiv">
@@ -15,24 +21,24 @@
                         <select name="genres" id="genreDropdown">
                             <option value="all">Everything</option>
                         </select>
-                        <button id="genreOkButton">OK</button>
                     </div>
-                    <div id="sortDiv">
-                        <label>Sort on:</label>
-                        <select name="sortOn" id="sortOn">
-                            <option value="name">Name</option>
-                            <option value="genre">Genre</option>
-                            <option value="price">Price</option>
-                            <option value="rating">Rating</option>
+                    <div id="ratingDiv">
+                        <label>A rating of at least:</label>
+                        <select name="ratingDropdown" id="ratingDropdown">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
                         </select>
-                        <button id="sortOkButton">OK</button>
                     </div>
                     <div id="priceDiv">
-                        <label>Show below price:</label>
+                        <label>At least a price of:</label>
                         <label id="priceLabel"> €</label>
-                        <input type="text" id="priceInput">
-                        <button id="priceOkButton">OK</button>
+                        <input type="text" id="priceInput" value="100">
                     </div>
+                    <button id="filterOkButton">Filter</button>
+                    <button id="filterResetButton">Reset</button>
                 </div>
             </div>
             <div id="gameDiv">
