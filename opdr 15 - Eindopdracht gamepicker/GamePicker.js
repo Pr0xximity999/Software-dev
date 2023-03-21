@@ -220,6 +220,7 @@ sortBtn.onclick = x => {
 
     games.forEach(game => {
         if (game.genre == selGenre ||  selGenre == "all") {
+            console.log("good genre");
             if (game.rating <= parseInt(selRating)) {
                 if (game.price <= parseInt(selPrice)) {
                     gamesSorted.push(game);
@@ -227,7 +228,7 @@ sortBtn.onclick = x => {
             }
         }
     });
-    create_game_list(games, gamesDiv, "Add to cart", bind_add_to_shopping_cart)
+    create_game_list(gamesSorted, gamesDiv, "Add to cart", bind_add_to_shopping_cart)
 }
 
 //The genre dropdown and list of genres already added
