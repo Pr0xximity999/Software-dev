@@ -13,7 +13,7 @@ body{
     width: 80%;
     background-color: darkslategrey;
 }
-#overview{
+#overview, #shop{
     margin: 0 auto;
     width: 85%;
     padding-bottom: 1em;
@@ -51,20 +51,27 @@ body{
 #filterOkButton{
     width: 8em;
 }
-#gameDiv{
+#gameDiv, #shopList{
     background-color: grey;
-    height: 45em;
+    height: fit-content;
+    max-height: 40em;
     border: solid 0.1em black;
     overflow-x: hidden;
     overflow-y: auto;
 }
-#doneButton{
+#doneButton, #backShopButton{
     border: none;
     background-color: slategray;
     font-size: 1em;
     margin-top: 1em;
     margin-left: 89%;
     padding: 2em;
+}
+#totalPrice{
+    border: 1px solid black;
+    background-color: grey;
+    font-size: 2em;
+    float: right;
 }
 
 

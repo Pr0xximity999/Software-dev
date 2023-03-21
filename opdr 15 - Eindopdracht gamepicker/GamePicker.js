@@ -193,7 +193,14 @@ var games = [
         "rating": 3
     }
 ];
+//The current game list
+var currGameList = [];
 
+//The shopping list
+var shoppingList = [];
+
+//Hides the shop
+document.getElementById("shop").hidden = true;
 
 //Binds the sort button to an event
 var resetBtn = document.getElementById("filterResetButton");
@@ -202,7 +209,7 @@ resetBtn.onclick = x =>{
     document.getElementById("ratingDropdown").value = "5";
     document.getElementById("priceInput").value = "100";
     clear_game_list()
-    make_game_list(games)
+    create_game_list(games, gamesDiv, "Add to cart", bind_add_to_shopping_cart)
 }
 var sortBtn = document.getElementById("filterOkButton");
 sortBtn.onclick = x => {
@@ -220,9 +227,7 @@ sortBtn.onclick = x => {
             }
         }
     });
-    console.log(games);
-    clear_game_list()
-    make_game_list(gamesSorted)
+    create_game_list(games, gamesDiv, "Add to cart", bind_add_to_shopping_cart)
 }
 
 //The genre dropdown and list of genres already added
@@ -259,13 +264,17 @@ filterBtn.onclick = x => {
 
 //The div for the game list
 var gamesDiv = document.getElementById("gameDiv");
-gamesDiv.style.display = "flex";
-gamesDiv.style.flexDirection = "column";
-gamesDiv.style.rowGap = "1em";
-gamesDiv.style.padding = "1em";
 
-make_game_list(games)
-function make_game_list(gameList) {
+var gameListBtns = [];
+create_game_list(games, gamesDiv, "Add to cart", bind_add_to_shopping_cart)
+function create_game_list(gameList, container, buttonTxt, buttonOnClick, showGenreRating=true) {
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
+    container.style.rowGap = "1em";
+    container.style.padding = "1em";
+    clear_game_list(container)
+    gameListBtns = [];
+    currGameList = gameList
     //Adds all the games to the list
     gameList.forEach(game => {
         //The div for the total game
@@ -277,8 +286,8 @@ function make_game_list(gameList) {
 
         //The button for adding it to your cart
         var cartButton = document.createElement("button");
-        cartButton.innerHTML = "Add to cart";
-
+        cartButton.innerHTML = buttonTxt;
+        gameListBtns.push(cartButton);
 
         //The div for the game name, rating and price
         var gameInfoDiv = document.createElement("div");
@@ -302,14 +311,18 @@ function make_game_list(gameList) {
         else {
             price = "€" + game.price;
         }
-
-        if (game.rating == 1) {
-            rating = "star";
+        if(showGenreRating){
+            if (game.rating == 1) {
+                rating = "star";
+            }
+            else {
+                rating = "stars";
+            }
+            gameRatingPrice.innerHTML = `${game.genre}| ${game.rating} ${rating} - ${price}`;
         }
-        else {
-            rating = "stars";
+        else{
+            gameRatingPrice.innerHTML = `${price}`;
         }
-        gameRatingPrice.innerHTML = `${game.rating} ${rating} - ${price}`;
         gameRatingPrice.style.marginRight = "1em";
 
         //Constructs the game div
@@ -319,10 +332,88 @@ function make_game_list(gameList) {
         totalDiv.appendChild(gameInfoDiv)
 
         //Adds the game to the game list
-        gamesDiv.appendChild(totalDiv)
+        container.appendChild(totalDiv)
+
+        //Binds the cart to the buttons
+        buttonOnClick()
     })
 
 }
-function clear_game_list() {
-    gamesDiv.innerHTML = "";
+function clear_game_list(container) {
+    container.innerHTML = "";
 }
+//Adding or removing something from the cart
+function bind_add_to_shopping_cart(){
+    for (let i = 0; i < gameListBtns.length; i++) {
+        gameListBtns[i].onclick = x => {
+            if(!shoppingList.includes(currGameList[i]))
+            {
+                alert(`Game added:\n-----------------\n--|${currGameList[i].title}\n----------------`)
+                shoppingList.push(currGameList[i]); 
+            }
+            else{
+                var input = prompt("Game already added to list\nWould you like to remove it? y/n").toLowerCase()
+                if(input == "y"){
+                    alert(`${currGameList[i].title} removed`)
+                    shoppingList.splice(shoppingList.indexOf(currGameList[i]), 1)
+                }
+            }
+        }
+    }
+}
+function bind_remove_to_shopping_cart(){
+    for (let i = 0; i < gameListBtns.length; i++) {
+        gameListBtns[i].onclick = x => {
+            if(shoppingList.includes(currGameList[i]))
+            {
+                alert(`Game removed:\n-----------------\n--|${currGameList[i].title}\n----------------`)
+                shoppingList.splice(shoppingList.indexOf(currGameList[i]), 1);
+                open_shop();
+            }
+        }
+    }
+}
+
+//Function for opening the shop
+function open_shop(){
+    document.getElementById("overview").hidden = true;
+    shopDiv.hidden = false;
+    create_game_list(shoppingList, shopListDiv, "Remove from cart", bind_remove_to_shopping_cart, false)
+
+    //Calculates the total price
+    var totalPrice = 0
+    shoppingList.forEach(game => {
+        totalPrice += game.price;
+    })
+    totalPriceLabel.innerHTML = `Total Price: €${totalPrice}`
+}
+
+//The shopping cart
+var shopDiv = document.getElementById("shop");
+var shopListDiv = document.getElementById("shopList");
+var shopbtn = document.getElementById("doneButton");
+var totalPriceLabel = document.getElementById("totalPrice")
+var backBtn = document.getElementById("backShopButton");
+
+shopListDiv.style.marginTop = "3em";
+
+//When clicked on the 'done' button
+shopbtn.onclick = x => {
+    document.getElementById("overview").hidden = true;
+    shopDiv.hidden = false;
+    create_game_list(shoppingList, shopListDiv, "Remove from cart", bind_remove_to_shopping_cart, false)
+
+    //Calculates the total price
+    var totalPrice = 0
+    shoppingList.forEach(game => {
+        totalPrice += game.price;
+    })
+    totalPriceLabel.innerHTML = `Total Price: €${totalPrice}`
+}
+
+//The back button from the shop
+backBtn.onclick = x =>{
+    document.getElementById("overview").hidden = false;
+    shopDiv.hidden = true
+    create_game_list(games, gamesDiv, "Add to cart", bind_add_to_shopping_cart)
+};
