@@ -1,0 +1,24 @@
+img{
+    position: fixed;
+    margin-top: -2.5%;
+    width: 100%;
+}
+p{
+    font-size: xx-large;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: -8%;
+    top: 50%;
+    left: 50%;
+}
+.white{
+    color: white;
+}
+.time{
+    
+    top: 55%;
+    left: 50%;
+}
+body{
+    margin: 0%;
+}

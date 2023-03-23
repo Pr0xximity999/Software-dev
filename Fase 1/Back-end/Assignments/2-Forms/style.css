@@ -1,0 +1,9 @@
+#inputFields{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    background-color: slategrey;
+    margin: auto;
+    width: 30%;
+}
