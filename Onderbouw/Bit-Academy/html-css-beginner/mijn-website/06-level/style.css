@@ -1,0 +1,22 @@
+input{
+    display: block;
+}
+textarea{
+    outline: none;
+    display: block;
+    border-color: red;
+    border-width: 4px;
+}
+textarea:focus{
+    border-color: green;
+}
+.submit{
+    border-radius: 0px;
+}
+input {
+    margin: .4rem;
+}
+fieldset{
+    margin-right: 85%;
+    display: block;
+}

@@ -1,0 +1,11 @@
+th, td{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+th{
+    background-color: lightgrey;
+}
+td{
+    border: 2px black solid  ;
+}

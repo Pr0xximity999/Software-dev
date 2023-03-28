@@ -1,0 +1,1 @@
+for getal in range(21, 50): print(getal))

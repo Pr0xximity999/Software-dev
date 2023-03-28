@@ -1,0 +1,32 @@
+body {
+    background-color: brown;
+}
+h1 {
+    color: red;
+    font-size: xx-large;
+}
+p {
+    color:yellowgreen;
+}
+.films {
+    color: darkblue;
+}
+.bram {
+    color: purple;
+    font-size: xx-large;
+}
+.chips {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: 300px;
+}
+.wide {
+    width: 1800px;
+    height: 450px; 
+}
+.me {
+    background-image: url('barry.png');
+    background-repeat: no-repeat;
+    background-size: 1600px 150px;
+}

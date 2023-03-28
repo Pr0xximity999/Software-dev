@@ -1,0 +1,21 @@
+body {
+    background-color: brown;
+}
+h1 {
+    color: red;
+    font-size: xx-large;
+}
+p {
+    color:green;
+}
+.films {
+    color: darkblue;
+}
+.bram {
+    color: purple;
+    font-size: xx-large;
+}
+.wide {
+    width: 45cm;
+    height: 14cm 
+}

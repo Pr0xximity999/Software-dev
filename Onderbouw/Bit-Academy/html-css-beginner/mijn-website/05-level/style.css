@@ -1,0 +1,73 @@
+header{
+    position: relative;
+    top: 10px;
+    border-bottom: 5px solid darkblue;
+}
+nav {
+    text-align: center;
+    background-color: rgb(109, 109, 255);
+}
+body {
+    background-color: blue;
+}
+h1 {
+    color: white;
+    font-size: xx-large;
+}
+a{
+    color: darkblue;
+}
+p {
+    color:lightblue;
+}
+.films {
+    color: purple;
+}
+.bram {
+    color: magenta;
+    font-size: xx-large;
+}
+.chips {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: 300px;
+}
+.wide {
+    width: 1800px;
+    height: 450px; 
+}
+.pme{
+    position: relative;
+    left: 60px;
+}
+.me {
+    background-image: url('barry.png');
+    background-repeat: no-repeat;
+    background-size: 1600px 150px;
+}
+.blue {
+    color: blue;
+    font-size: x-large;
+    position: relative;
+    top: 15px;
+}
+article {
+    background-color: darkblue  ;
+    display: block;
+    width: 1200px;
+    position: relative;
+    left: 200px;
+}
+.linus {
+    width: 1200px;
+    position: relative;
+    top: -19px;
+    left: 200px;
+}
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: rgb(109, 109, 255);
+}

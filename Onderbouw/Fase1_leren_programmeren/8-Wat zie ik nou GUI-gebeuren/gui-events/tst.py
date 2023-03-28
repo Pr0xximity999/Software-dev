@@ -1,0 +1,1 @@
+print("".join([value.lower() if index % 2 == 0 else value.upper() for index, value in enumerate(input("Enter text: "))]))

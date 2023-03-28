@@ -1,0 +1,11 @@
+li{
+    display: inline;
+}
+
+input{
+    display: block;
+}
+textarea{
+    display: block;
+}
+

@@ -1,0 +1,65 @@
+
+ Naam van de opdracht: exceptions
+
+ Datum: 10/03/2022
+
+ Opdracht van: Thomas koman
+
+ Nagekeken door: Martijn van Houwelingen
+
+
+
+
+
+Planning
+
+Is er een planning gemaakt (op Trello): ja
+
+Staan er op de kaartjes uren ingeschat: nee, maar dat kan niet op de app
+
+Is de planning (goed) bijgehouden: ja
+
+Is er bij inleveren link naar planning aanwezig: nee
+
+
+
+
+
+Github
+
+Is er een REPO gemaakt voor de opdracht: ja
+
+Zijn er meerdere commints aanwezig: ja
+
+Zijn er goede beschrijvingen aanwezig bij de commints: ja
+
+Is er bij inleveren link naar REPO aanwezig: ja
+
+
+
+
+
+Opdracht
+
+Voldoet de opdracht aan de gestelde technische eisen: ja
+
+Voldoet de opdracht aan de gestelde functionele eisen: ja
+
+Is er een ZIP file ingeleverd met alle opdrachten: ja
+
+
+
+
+Indien de opdracht naar jouw mening niet voldaan is wat moet er dan nog aangepast worden om de opdracht succesvol af te ronden?
+
+
+
+Wat zijn jouw TOPS:
+
+mooie indents
+lekker kort maar krachtig 
+
+
+
+Wat zijn jouw TIPS:
+

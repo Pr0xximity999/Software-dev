@@ -1,0 +1,6 @@
+table{
+    border-color: black;
+}
+th, input{
+    padding: 20px;
+}
