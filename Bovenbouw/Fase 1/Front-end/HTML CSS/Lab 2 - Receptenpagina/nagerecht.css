@@ -1,0 +1,46 @@
+body{
+    background-image: url('sla bg.jpg');
+    background-size: 100% 100%;
+}
+button{
+    width: 10%;
+    height: 100px;
+}
+div{
+    font-family: 'Roboto', sans-serif;
+    width: 65%;
+    margin: 0 auto;
+}
+#first-paragraph{
+    font-size: 24px;
+    line-height: 32px;
+}
+#title1{
+    padding-bottom: 20px;
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: -10px;
+    border-bottom: solid grey 2px;
+}
+#title2{
+    margin-top: 40px;
+    font-size: 32px;
+    line-height: 32px;
+
+}
+#ingredienten{
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 26px;
+}
+#bereiding{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 26px;
+}
+#tip{
+    font-size: larger;
+    padding: 21px;
+    border: solid 4px #44da22;
+    background-color: #44da22;
+}

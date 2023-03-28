@@ -1,0 +1,73 @@
+body{
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2{
+    font-size: 32px;
+}
+p, a, h1, h2, li, button{
+    font-family: sans-serif;
+}
+#maindiv{
+    margin: 0 auto;
+    width: 80%;
+}
+header{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+header > nav{
+    margin-left: 2em;
+    display: flex;
+    column-gap: 2em;
+}
+.headergame{
+    padding: 1em;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    row-gap: 1em;
+}
+.gameinfo{
+    display: flex;
+    column-gap: 1em;
+}
+#tags{
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+.tag{
+    padding: 1em;
+}
+.title{
+    padding-left: 1em;
+    flex: 2;
+}
+.information{
+    flex: 1;
+}
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1em;
+    padding: 1em;
+}
+.images > img{
+    width: 24%;
+}
+.requirements{
+    padding-left: 1em;
+}
+footer{
+    padding-left: 1em;
+}
+footer > div{
+    margin-bottom: 2em;
+}
