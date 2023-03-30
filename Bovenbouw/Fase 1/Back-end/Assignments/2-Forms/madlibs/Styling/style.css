@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategrey;
+}
+.fieldError{
+    color: red;
+}
+#main{
+    margin: auto;
+    background-color: grey;
+    display: flex;
+    margin-top: 4em;
+    flex-direction: column;
+    width: 60%;
+}
+#nav{
+    display: flex;
+    column-gap: 1em;
+    background-color: wheat;
+    height: 3em;
+}
+.navBtns{
+    height: 100%;
+    font-size: 1.1em;
+    background-color: wheat;
+    border: none;
+}
+#mainDiv{
+    margin: auto;
+    width: 90%;
+}
+.panicQuestionDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.panicQuestionLabel{
+    font-size: 1.1em;
+}
+.panicQuestionInput{
+    width: 15em;
+}
+#panicSubmitBtn{
+    margin-bottom: 1em;
+    float: right;
+}
+footer{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+
+}
+footer>p{
+    margin: auto;
+}
