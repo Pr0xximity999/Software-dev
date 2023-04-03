@@ -1,9 +1,5 @@
 <?php
-$showPanicQuestions = true;
-$showPanicAwnser = false;
-$showIgnoranceQuestions = false;
-$showIgnoranceAwnser = false;
-
+require_once("once.php");
 function clean_input($data)
 {
     $data = trim($data);
@@ -12,23 +8,39 @@ function clean_input($data)
     return $data;
 }
 
-//The questions used in the panic madlib
 $panicQuestions = array(
-    "name" => array("question" => "Wat is je naam?", "defaultValue" => "", "fieldError" => "*"),
-    "favAnimal" => array("question" => "Wat is je lievelingsdier?", "defaultValue" => "", "fieldError" => "*"),
-    "favLiquid" => array("question" => "Wat is je favoriete vloeistof?", "defaultValue" => "", "fieldError" => "*"),
-    "favColor" => array("question" => "Wat is je favoriete kleur?", "defaultValue" => "", "fieldError" => "*"),
-    "toiletCount" => array("question" => "Hoe vaak ga je naar de wc op 1 dag?", "defaultValue" => "", "fieldError" => "*"),
-    "milBought" => array("question" => "Als je 1 miljoen had en 1 ding kon kopen, wat zou je kopen?", "defaultValue" => "", "fieldError" => "*"),
-    "poop" => array("question" => "Als je 1 miljoen had en 1 ding kon kopen, wat zou je kopen?", "defaultValue" => "", "fieldError" => "*"),
+    "pName" => array("question" => "Wat is je naam?", "defaultValue" => "", "fieldError" => "*"),
+    "pFavAnimal" => array("question" => "Wat is je lievelingsdier?", "defaultValue" => "", "fieldError" => "*"),
+    "pFavLiquid" => array("question" => "Wat is je favoriete vloeistof?", "defaultValue" => "", "fieldError" => "*"),
+    "pFavColor" => array("question" => "Wat is je favoriete kleur?", "defaultValue" => "", "fieldError" => "*"),
+    "pToiletCount" => array("question" => "Hoe vaak ga je naar de wc op 1 dag?", "defaultValue" => "", "fieldError" => "*"),
+    "pMilBought" => array("question" => "Als je 1 miljoen had en 1 ding kon kopen, wat zou je kopen?", "defaultValue" => "", "fieldError" => "*"),
 );
 $ignoranceQuestions = array(
-    "name" => array("question" => "Wat is je naam?", "defaultValue" => "", "fieldError" => "*"),
+    "iName" => array("question" => "Wat is je naam?", "defaultValue" => "", "fieldError" => "*"),
+    "iBabyNum" => array("question" => "Hoeveel minuten per dag zit je op je telefoon?", "defaultValue" => "", "fieldError" => "*"),
+    "iFavForestAnimal" => array("question" => "Wat is je favoriete bosdier?", "defaultValue" => "", "fieldError" => "*"),
+    "iRandomObject" => array("question" => "Wat is het eerste object wat in je opkomt als ik supermarkt zeg", "defaultValue" => "", "fieldError" => "*"),
+    "iFavBreadTopping" => array("question" => "Wat is je favoriete broodbeleg?", "defaultValue" => "", "fieldError" => "*"),
+    "iFavPerson" => array("question" => "Wie is je favoriete Persoon?", "defaultValue" => "", "fieldError" => "*"),
+    "iFavMusic" => array("question" => "Wat is je favoriete muzieknummer?", "defaultValue" => "", "fieldError" => "*"),
+    "iFavTaste" => array("question" => "Wat is je favoriete smaak?", "defaultValue" => "", "fieldError" => "*"),
 );
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $panicAllFieldsFilled = $ignoranceAllFieldsFilled = true;
     foreach ($_POST as $key => $value) {
+
+        if($key[0] == "p"){
+            $showPanicQuestions = true;
+            $showIgnoranceQuestions = false;
+        }
+        elseif($key[0] == "i"){
+            $showIgnoranceQuestions = true;
+            $showPanicQuestions = false;
+        }
+
         if($showPanicQuestions){
+            $ignoranceAllFieldsFilled = false;
             $panicQuestions[$key]["defaultValue"] =  clean_input($value);
 
             if (empty($value)) {
@@ -39,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
         else if($showIgnoranceQuestions){
+            $panicAllFieldsFilled = false;
             $ignoranceQuestions[$key]["defaultValue"] = clean_input($value);
             if (empty($value)) {
                 $ignoranceAllFieldsFilled = false;
@@ -52,9 +65,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $showPanicQuestions = false;
         $showPanicAwnser = true;
     }
-    if ($panicAllFieldsFilled) {
+    if ($ignoranceAllFieldsFilled) {
+        $showIgnoranceQuestions = false;
+        $showIgnoranceAwnser = true;
+    }
+}
+elseif($_SERVER["REQUEST_METHOD"] == "GET"){
+    if(array_key_exists('panic', $_GET)){
+        $showPanicQuestions = true;
+        $showIgnoranceQuestions = false;
+    }
+    if(array_key_exists('ignorance', $_GET)){
         $showPanicQuestions = false;
-        $showPanicAwnser = true;
+        $showIgnoranceQuestions = true;
     }
 }
 ?>
@@ -69,14 +92,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <main id="main">
         <header id="nav">
-            <button class="navBtns">Er heerst paniek...</button>
-            <button class="navBtns">Onkunde</button>
+            <form action="madlibs.php" method="get">
+                <input type="submit" name="panic" class="navBtns" value="Er heerst paniek...">
+                <input type="submit" name="ignorance" class="navBtns" value="Onkunde">
+            </form>
         </header>
         <div id="mainDiv">
             <?php if ($showPanicQuestions) {
                 require("./panic/panic_questions.php");
             } elseif($showPanicAwnser) {
                 require("./panic/panic_result.php");
+            }
+
+            if($showIgnoranceQuestions){
+                require("./ignorance/ignorance_questions.php");
+            }
+            elseif($showIgnoranceAwnser){
+                require("./ignorance/ignorance_result.php");
             }
             ?>
         </div>

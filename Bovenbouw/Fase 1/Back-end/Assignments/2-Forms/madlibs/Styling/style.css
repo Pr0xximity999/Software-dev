@@ -40,7 +40,7 @@ body{
 .questionInput{
     width: 15em;
 }   
-.submitBtn{
+#submitBtn{
     margin-bottom: 1em;
     float: right;
 }

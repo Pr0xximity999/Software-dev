@@ -2,7 +2,6 @@
 <form action="madlibs.php" method="post">
     <?php
     foreach ($panicQuestions as $questionID => $question) { 
-        $question["question"]
         ?>
         <div class="questionDiv">
             <label class="questionLabel">
