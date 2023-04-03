@@ -1,6 +1,3 @@
-<?php
-    require("variables.php");
-?>
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +7,7 @@
 </head>
 
 <body>
-    <p><?= implode(", ", $fruits)?></p>
+    <?php require("content.php")?>
 </body>
 
 </html>
