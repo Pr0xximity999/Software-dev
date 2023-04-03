@@ -1,5 +1,17 @@
 <?php
 $showPanicQuestions = true;
+$showPanicAwnser = false;
+$showIgnoranceQuestions = false;
+$showIgnoranceAwnser = false;
+
+function clean_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 //The questions used in the panic madlib
 $panicQuestions = array(
     "name" => array("question" => "Wat is je naam?", "defaultValue" => "", "fieldError" => "*"),
@@ -8,21 +20,41 @@ $panicQuestions = array(
     "favColor" => array("question" => "Wat is je favoriete kleur?", "defaultValue" => "", "fieldError" => "*"),
     "toiletCount" => array("question" => "Hoe vaak ga je naar de wc op 1 dag?", "defaultValue" => "", "fieldError" => "*"),
     "milBought" => array("question" => "Als je 1 miljoen had en 1 ding kon kopen, wat zou je kopen?", "defaultValue" => "", "fieldError" => "*"),
+    "poop" => array("question" => "Als je 1 miljoen had en 1 ding kon kopen, wat zou je kopen?", "defaultValue" => "", "fieldError" => "*"),
+);
+$ignoranceQuestions = array(
+    "name" => array("question" => "Wat is je naam?", "defaultValue" => "", "fieldError" => "*"),
 );
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $panicAllFieldsFilled = $ignoranceAllFieldsFilled = true;
     foreach ($_POST as $key => $value) {
-        $panicAllFieldsFilled = true;
-        $panicQuestions[$key]["defaultValue"] = $value;
-        if (empty($value)) {
-            $panicAllFieldsFilled = false;
-            $panicQuestions[$key]["fieldError"] = "*field required";
-        } else {
-            $panicQuestions[$key]["fieldError"] = "";
-        }
+        if($showPanicQuestions){
+            $panicQuestions[$key]["defaultValue"] =  clean_input($value);
 
+            if (empty($value)) {
+                $panicAllFieldsFilled = false;
+                $panicQuestions[$key]["fieldError"] = "*field required";
+            } else {
+                $panicQuestions[$key]["fieldError"] = "";
+            }
+        }
+        else if($showIgnoranceQuestions){
+            $ignoranceQuestions[$key]["defaultValue"] = clean_input($value);
+            if (empty($value)) {
+                $ignoranceAllFieldsFilled = false;
+                $ignoranceQuestions[$key]["fieldError"] = "*field required";
+            } else {
+                $ignoranceQuestions[$key]["fieldError"] = "";
+            }
+        }
     }
     if ($panicAllFieldsFilled) {
         $showPanicQuestions = false;
+        $showPanicAwnser = true;
+    }
+    if ($panicAllFieldsFilled) {
+        $showPanicQuestions = false;
+        $showPanicAwnser = true;
     }
 }
 ?>
@@ -43,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="mainDiv">
             <?php if ($showPanicQuestions) {
                 require("./panic/panic_questions.php");
-            } else {
+            } elseif($showPanicAwnser) {
                 require("./panic/panic_result.php");
             }
             ?>

@@ -30,17 +30,17 @@ body{
     margin: auto;
     width: 90%;
 }
-.panicQuestionDiv{
+.questionDiv{
     display: flex;
     justify-content: space-between;
 }
-.panicQuestionLabel{
+.questionLabel{
     font-size: 1.1em;
 }
-.panicQuestionInput{
+.questionInput{
     width: 15em;
-}
-#panicSubmitBtn{
+}   
+.submitBtn{
     margin-bottom: 1em;
     float: right;
 }
