@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <p><?=$num?></p>
+    <p><?= implode(", ", $fruits)?></p>
 </body>
 
 </html>
