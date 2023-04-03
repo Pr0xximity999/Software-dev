@@ -1,3 +1,3 @@
 <?php 
-    $num = 26047;
+    $name = "Thomas Koman";
 ?>
