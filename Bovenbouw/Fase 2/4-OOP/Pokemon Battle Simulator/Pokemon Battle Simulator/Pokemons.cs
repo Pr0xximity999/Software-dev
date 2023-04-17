@@ -21,7 +21,7 @@ namespace Pokemons
         }
         public void Battlecry(string cry)
         {
-            Console.WriteLine($"{cry}!");
+            Console.WriteLine($"Your pokemon yelled {cry}!");
         }
     }
 }

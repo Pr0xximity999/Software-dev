@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj": {}
+    "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj": {
+    "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
+        "projectUniqueName": "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
         "projectName": "Pokemon Battle Simulator",
-        "projectPath": "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
+        "projectPath": "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
         "packagesPath": "C:\\Users\\thoma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\obj\\",
+        "outputPath": "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
