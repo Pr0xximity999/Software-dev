@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
+      "projectUniqueName": "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
       "projectName": "Pokemon Battle Simulator",
-      "projectPath": "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
+      "projectPath": "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\Pokemon Battle Simulator.csproj",
       "packagesPath": "C:\\Users\\thoma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thoma\\Documents\\.School\\Software-dev\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\obj\\",
+      "outputPath": "C:\\Users\\thoma\\Documents\\SChool\\SoftDev\\Jaren\\Bovenbouw\\Fase 2\\4-OOP\\Pokemon Battle Simulator\\Pokemon Battle Simulator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,17 +51,11 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
