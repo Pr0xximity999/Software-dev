@@ -12,14 +12,14 @@ namespace Trainers
     {
         private int currPokemon = -1;
         private string name;
-        private List<Pokeball> belt = new List<Pokeball>() 
+        private List<Pokeballs.Pokeballs> belt = new List<Pokeballs.Pokeballs>() 
         { 
-            new Pokeball(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeball(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeball(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeball(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeball(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeball(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
         };
         public Trainer(string name)
         {
@@ -30,30 +30,21 @@ namespace Trainers
         {
             return name;
         }
-        public void Throw(int index)
-        {   
-            if(index == currPokemon)
-            {
-                Console.WriteLine("This pokemon is already in the field");
-            }
-            else if(currPokemon != -1)
-            {
-                this.Return();
-            }
 
-            if(belt[index].Open())
-            {
-                Console.WriteLine($"{name}: '{belt[index].GetName()} I choose you!'");
-                belt[index].GetPokemon().Battlecry(belt[index].GetName());
-                currPokemon = index;
-            }
+        public Pokemon getActivePokemon()
+        {
+            return belt[currPokemon].GetPokemon();
+        }
+
+        public void Throw(int index)
+        {
+            Pokeballs.Pokeballs indexed_pokemon = belt[index];
+            Console.WriteLine($"{name}: '{indexed_pokemon.GetName()} I choose you!'");
+            currPokemon = index;
         }
         public void Return()
         {
-            if (belt[currPokemon].Close())
-            {
-                Console.WriteLine($"{name}: '{belt[currPokemon].GetName()}, come back!'");
-            }
+            Console.WriteLine($"{name}: '{belt[currPokemon].GetName()}, come back!'");
         }
     }
 }

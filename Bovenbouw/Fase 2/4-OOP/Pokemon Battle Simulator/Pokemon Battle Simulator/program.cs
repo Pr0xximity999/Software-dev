@@ -38,13 +38,29 @@ namespace Pokemon_Battle_Simulator
             string player2Name = Console.ReadLine() + "";
             Trainer player2 = new Trainer(player2Name);
 
-            Console.WriteLine();
-            SWrite($"{player1.getName()} throws its pokemon into the field!", 1000);
-            player1.Throw(0);
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine();
+                SWrite($"{player1.getName()} throws its pokemon into the field!", 1000);
+                player1.Throw(i);
+                player1.getActivePokemon().Battlecry(player1.getActivePokemon().GetName());
+                Thread.Sleep(3000);
 
-            Console.WriteLine();
-            SWrite($"{player2.getName()} throws its pokemon into the field!", 1000);
-            player2.Throw(0);
+
+                Console.WriteLine();
+                SWrite($"{player2.getName()} throws its pokemon into the field!", 1000);
+                player2.Throw(i);
+                player2.getActivePokemon().Battlecry(player2.getActivePokemon().GetName());
+                Thread.Sleep(3000);
+
+                SWrite("", 1000);
+                player1.Return();
+                Thread.Sleep(1000);
+
+                SWrite("", 1000); ;
+                player2.Return();
+                Thread.Sleep(1000);
+            }
         }
     }
 }

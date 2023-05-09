@@ -4,25 +4,24 @@ using System;
 namespace Pokeballs
 {
 
-    class Pokeball
+    class Pokeballs
     {
         private Pokemon pokemon;
-        private bool isEmpty;
-        private bool isOpen = false;
+        private bool isFull;
         
-        public Pokeball()
+        public Pokeballs()
         {
-            this.isEmpty = true;
+            this.isFull = false;
         }
-        public Pokeball(Pokemon pokemon)
+        public Pokeballs(Pokemon pokemon)
         {
             this.pokemon = pokemon;
-            this.isEmpty = false;
+            this.isFull = true;
         }
 
         public string GetName()
         {   
-            if(!isEmpty)
+            if(isFull)
             { 
                 return pokemon.GetName();
             }
@@ -31,58 +30,13 @@ namespace Pokeballs
                 return "";
             }
         }
+        public bool getState()
+        {
+            return isFull;
+        }
         public Pokemon GetPokemon()
         {
             return pokemon;
-        }
-        public bool contain(Pokemon pokemon)
-        {
-             if(isEmpty)
-             {
-                this.pokemon = pokemon;
-                isEmpty = false;
-                return true;
-             }
-            else 
-            {
-                Console.WriteLine("There is already a pokemon in this ball!");
-                return false;
-            }
-        }
-        public bool Open()
-        {
-            if(!isEmpty && !isOpen)
-            {
-                isOpen = true;
-                return true;
-            }
-            else if(isEmpty)
-            {
-                Console.WriteLine("This pokeball is empty");
-                return false;
-            }
-            else
-            {
-                Console.WriteLine("This pokeball is already opened!");
-                return false;
-            }
-        }
-        public bool Close()
-        {
-            if(isOpen && !isEmpty)
-            {
-                return true;
-            }
-            else if (!isOpen)
-            {
-                Console.WriteLine($"{GetName()} is already in this pokeball!");
-                return false;
-            }
-            else
-            {
-                Console.WriteLine("This pokeball has no pokemon bound to it!");
-                return false;
-            }
         }
     }
 }
