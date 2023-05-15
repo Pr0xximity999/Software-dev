@@ -14,12 +14,12 @@ namespace Trainers
         private string name;
         private List<Pokeballs.Pokeballs> belt = new List<Pokeballs.Pokeballs>() 
         { 
-            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
-            new Pokeballs.Pokeballs(new Pokemon("Charmender", "Fire", "Water")),
+            new Pokeballs.Pokeballs(new Bulbasaur("Bulbasaur1")),
+            new Pokeballs.Pokeballs(new Bulbasaur("Bulbasaur2")),
+            new Pokeballs.Pokeballs(new Charmender("Charmender1")),
+            new Pokeballs.Pokeballs(new Charmender("Charmender2")),
+            new Pokeballs.Pokeballs(new Squirtle("squirtle1")),
+            new Pokeballs.Pokeballs(new Squirtle("squirtle2")),
         };
         public Trainer(string name)
         {

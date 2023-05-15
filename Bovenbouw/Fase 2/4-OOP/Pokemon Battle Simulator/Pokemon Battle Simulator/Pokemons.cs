@@ -3,7 +3,7 @@
 namespace Pokemons
 {
 
-    class Pokemon
+    abstract class Pokemon
     {
         private string name;
         private string strength;
@@ -19,9 +19,14 @@ namespace Pokemons
         {
             return name;
         }
-        public void Battlecry(string cry)
+        public string GetStrength()
         {
-            Console.WriteLine($"{name}: '{cry}!'");
+            return strength;
         }
+        public string getWeakness()
+        {
+            return weakness;
+        }
+        public abstract void Battlecry(string cry);
     }
 }
