@@ -1,4 +1,5 @@
 ﻿using Pokeballs;
+using Pokemon_Battle_Simulator;
 using Pokemons;
 using System;
 using System.Collections.Generic;
@@ -39,12 +40,15 @@ namespace Trainers
         public void Throw(int index)
         {
             Pokeballs.Pokeballs indexed_pokemon = belt[index];
-            Console.WriteLine($"{name}: '{indexed_pokemon.GetName()} I choose you!'");
+            Utils.SlowWrite($"{name}: '{indexed_pokemon.GetName()},", newLine: false);
+            Utils.SlowWrite(" I choose you!'");
             currPokemon = index;
         }
         public void Return()
         {
-            Console.WriteLine($"{name}: '{belt[currPokemon].GetName()}, come back!'");
+            Utils.SlowWrite($"{name}: '{belt[currPokemon].GetName()},", newLine:false);
+            Thread.Sleep(100);
+            Utils.SlowWrite(" come back!'");
         }
     }
 }

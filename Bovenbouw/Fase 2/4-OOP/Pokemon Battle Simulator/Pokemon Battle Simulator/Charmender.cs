@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokemon_Battle_Simulator;
+using System;
 
 namespace Pokemons
 {
@@ -11,10 +12,15 @@ namespace Pokemons
         {
             this.name = name;
         }
+        public override string getSubClass()
+        {
+            return "Charmender";
+        }
 
         public override void Battlecry(string cry)
         {
-            Console.WriteLine($"{name}: '{cry}!'");
+            Utils.SlowWrite($"{name}:", newLine: false);
+            Utils.SlowWrite($"'{cry}!'");
         }
     }
 }

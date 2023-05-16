@@ -27,6 +27,7 @@ namespace Pokemons
         {
             return weakness;
         }
+        public abstract string getSubClass();
         public abstract void Battlecry(string cry);
     }
 }
