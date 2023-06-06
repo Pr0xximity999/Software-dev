@@ -14,26 +14,11 @@ namespace Pokemon_Battle_Simulator
         {
             multiplier = mult;
         }
-        public static void SleepWrite(string text, int ms, bool newLine = true)
-        {
-            ms /= multiplier;
-            if (newLine)
-            {
-                Console.WriteLine(text);
-            }
-            else
-            {
-                Console.Write(text);
-            }
-            Thread.Sleep(ms);
-        }
-
         public static void SlowWrite(string text, int ms=50, bool newLine = true, bool waitAtEnd=true)
         {
             ms /= multiplier;
             foreach(char letter in text)
             {
-                
                 Console.Write(letter);
                 Thread.Sleep(ms);
             }
