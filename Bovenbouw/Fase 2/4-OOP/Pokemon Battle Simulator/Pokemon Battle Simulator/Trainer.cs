@@ -32,6 +32,10 @@ namespace Trainers
             return name;
         }
 
+        public int getActivePokemonIndex()
+        {
+            return currPokemon;
+        }
         public Pokemon getActivePokemon()
         {
             return belt[currPokemon].GetPokemon();
@@ -40,15 +44,15 @@ namespace Trainers
         public void Throw(int index)
         {
             Pokeballs.Pokeballs indexed_pokemon = belt[index];
-            Utils.SlowWrite($"{name}: '{indexed_pokemon.GetName()},", newLine: false);
-            Utils.SlowWrite(" I choose you!'");
+            Utils.SlowWrite($"{name}: '{indexed_pokemon.GetName()},",80 ,false);
+            Utils.SlowWrite(" I choose you!'", 40);
             currPokemon = index;
         }
         public void Return()
         {
-            Utils.SlowWrite($"{name}: '{belt[currPokemon].GetName()},", newLine:false);
+            Utils.SlowWrite($"{name}: '{belt[currPokemon].GetName()},", 80, false);
             Thread.Sleep(100);
-            Utils.SlowWrite(" come back!'");
+            Utils.SlowWrite(" come back!'", 40);
         }
     }
 }

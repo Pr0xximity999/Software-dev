@@ -19,8 +19,8 @@ namespace Pokemons
 
         public override void Battlecry(string cry)
         {
-            Utils.SlowWrite($"{name}:", newLine: false);
-            Utils.SlowWrite($"'{cry}!'");
+            Utils.SlowWrite($"{name}:", 100, false);
+            Utils.SlowWrite($"'{cry}!'", 50);
         }
     }
 }

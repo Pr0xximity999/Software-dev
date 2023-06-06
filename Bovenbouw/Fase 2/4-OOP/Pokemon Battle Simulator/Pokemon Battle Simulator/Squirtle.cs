@@ -8,7 +8,7 @@ namespace Pokemons
     {
         private string name = "";
 
-        public Squirtle(string name) :base(name, "water", "leaf")
+        public Squirtle(string name) :base(name, "water", "grass")
         {
             this.name = name;
         }
@@ -19,8 +19,8 @@ namespace Pokemons
 
         public override void Battlecry(string cry)
         {
-            Utils.SlowWrite($"{name}:", newLine:false);
-            Utils.SlowWrite($"'{cry}!'");
+            Utils.SlowWrite($"{name}:", 100, false);
+            Utils.SlowWrite($"'{cry}!'", 50);
         }
     }
 }

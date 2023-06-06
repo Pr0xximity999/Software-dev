@@ -27,6 +27,11 @@ namespace Pokemons
         {
             return weakness;
         }
+
+        public bool isWeakTo(Pokemon pokemon)
+        {
+            return pokemon.GetStrength() == this.getWeakness();
+        }
         public abstract string getSubClass();
         public abstract void Battlecry(string cry);
     }
