@@ -1,0 +1,13 @@
+#inputFields{
+    padding: 1em;
+    row-gap: 1em;
+    background-color: slategrey;
+    margin: auto;
+    width: 30%;
+}
+button{
+    margin-left: 80%;
+}
+.error{
+    color: red;
+}
