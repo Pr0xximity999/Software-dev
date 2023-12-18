@@ -1,0 +1,5 @@
+networking > networksettings
+add port 8172 
+leave everything as is, add name web-deploy
+
+overview > networking > configure > add name for dns

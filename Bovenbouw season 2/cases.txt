@@ -1,0 +1,197 @@
+- Het ledje gaat niet aan omdat hij doorgebrand is
+>pak een ander ledje en kijk of die wel werkt met dezelfde opstelling
+>maak het ledje open en kijk of je eventuele schade ziet
+
+- Het ledje gaat niet aan omdat er een kabelbreuk zit in een van de kabels
+>ga alle kabels na door ze te vervangen
+>kijk of je een uitwendige breuk ziet in een van de kabels
+
+- Het ledje gaat niet aan omdat de weerstand te groot is van het weerstandje
+>haal het weerstandje eruit om te kijken of het ledje wel werkt
+>meet met een multimeter wat de weerstand is
+>vervan het weerstandje met een eentje met minder vermogen 
+
+- Het ledje gaat niet aan omdat de arduino niet werkt
+>controleer of de comport die de arduino gebruikt ook echt werkt
+>kijk of er lampjes branden op de arduino
+>staat je laptop aan?
+>kijk voor kabelbreuken in het voedingssnoer
+>controleer of je de nieuwste versie van de arduino ide hebt
+>vervang de voedingskabel
+
+- Het ledje gaat niet aan omdat een van de pootjes van het knopje kapot is
+>controleer alle pootjes van de knop om te kijken of er een breuk in zit
+>vervang het knopje met een andere om te kijken of die wel werkt
+
+- Het ledje gaat niet aan omdat het glas van het ledje dof is geworden
+>schijn met een lamp in het ledje om te kijken of het licht doorlaat
+>vervang het ledje
+
+- Het ledje gaat niet aan omdat het knopje van de button kapot
+>druk de knop in om te kijken of hij abnormaal aan voelt
+>vervan de knop om te kijken of die wel werkt
+
+- Het ledje gaat niet aan omdat er een beuk in het breadboard zit
+>controleer de breadboard voor breuken
+>vervang het breadboard om te kijken of die wel werkt
+
+- Het ledje gaat niet aan omdat er een syntax error zit in je code
+>controlleer je code op syntax errors, kijk in de output voor errors
+
+- Het ledje gaat niet aan omdat een pin variabel niet goed gedefineerd is
+>controlleer of het een getal variabel is
+>controlleer of het pingetal van de variabel hetzelfde is van de kabel die aangesloten is
+
+- Het ledje gaat niet aan omdat de digitalWrite niet goed word aangeroepen
+>controlleer dat de statement op de juiste plek word aangeroepen
+>zet de statement buiten de scope van de if statement om te kijken of de statement uberhaupt wel werkt
+
+- Het ledje gaat niet aan omdat de if statement van de buttoncheck niet true word
+>zet print statements in je code die uitprinten wat de waarde is
+>stap door je code heen om te kijken of de gecheckede waarde true word
+
+- Het ledje gaat niet aan omdat een van de pinsockets kapot is
+>controlleer de poorten op eventuele breuken
+>zet de pin op een ander soortgelijke poort om te kijken of die wel werkt
+>pak een andere arduino
+
+- Het ledje gaat niet aan omdat er kortsluiting word gemaakt door water op de opstelling
+>controlleer voor water op de opstelling
+>pak iets om je opstelling mee te drogen zoals een fohn
+
+- Het ledje gaat niet aan omdat er een fabrieksfoutje voor een verkeerd materiaal heeft gezorgt die niet conductief is
+>controlleer of het materiaal hetzelfde eruit ziet
+>vervang het ledje voor een andere om te kijken of het werkt
+>gebruik een spectrometer om te kijken of het het juiste materiaal is
+
+- Het ledje gaat niet aan omdat je oplader van je laptop kapot is en je stroom valt uit
+>controleer of je oplader werkt
+>vervang je oplader
+
+- Het ledje gaat niet aan omdat hij verkeerdom op je breadboard zit
+>draai het ledje om en kijk of hij nu werkt
+
+- Het ledje gaat niet aan omdat een van je pinnen in de verkeerde rij zit
+>controleer of alles naar het goede lijntje leid
+
+- Het ledje gaat niet aan omdat er een stroomuitval is
+>ga naar de stoppenkast om te kijken of de stop nog aan staat
+>controleer of andere electrische apparaten het wel doen
+
+- Het ledje gaat niet aan omdat het buiten de zichtbare kleurspectrum valt
+>gebruik een spectrometer om te kijken welke golflengte het ledje uitstraalt
+>vervan het ledje met een andere
+
+- Het ledje gaat niet aan omdat er geen digitalWrite in je code staat
+>controlleer je code om te kijken of er digitalWrite is geschreven en zo niet, schrijf hem op de goede plek
+
+- Het ledje gaat niet aan omdat lennert boos is geworden op kutkindjes op de fiets en reageerd zijn woede uit op jou opstelling
+>vraag aan lennert of hij boos is geworden en je opstelling heeft gesloopt
+>controlleer of je opstelling kapot is
+>vervang je opstelling
+
+- Het ledje gaat niet aan omdat een bitfip door middel van kosmische straling heeft gezorgt voor een incorrecte staat van het lampje terwijl je wel de knop hebt ingedrukt
+>je bent shit out of luck als dit gebeurt, druk de knop opnieuw in
+
+- Het ledje gaat niet aan omdat een manipulatie van ram in je computer de verkeerde instructies naar de arduino heeft gestuurd waardoor je code niet werkt
+>controlleer met een memory vieuwer of de juiste data mee word gegeven naar de arduino
+>vervang je laptop
+
+- Het ledje gaat niet aan omdat de check statement van de knop verkeerdom is opgeschreven waardoor hij niet uitgevoerd word
+>draai de if statement om om te kijken of hij nu wel werkt
+
+- Het ledje gaat niet aan omdat je de compile knop niet in kan drukken omdat je muis kapot is
+>controleer of je muis nog wel werkt
+>gebruik je trackpad als je die hebt
+>vervang je muis
+
+- Het ledje gaat niet aan omdat het arduino ide programma niet open staat
+>controlleer in task manager of hij open staat
+>open het programma opnieuw
+
+- Het ledje gaat niet aan omdat je met een kater naar school toe komt en je hebt niet de focus om de opstelling te maken
+>probeer te herinneren wat je de vorige avond hebt gedaan
+>vraag aan een klasgenoot of hij je wilt assisteren
+>ga niet de avond voor school drinken (dumbass)
+
+- Het ledje gaat niet aan omdat de interne wiring van je arduino incorrect is aangelegt waardoor hij niet een signaal kan doorgeven naar je led
+>controlleer of een van de output statements werkt
+>vervan je arduino
+
+- Het ledje gaat niet aan omdat zonnewinden van de zon kortsluiting zorgt in je opstelling
+>controlleer het nieuws om te kijken of er eventuele zonnewinden zijn geweest in de laatste tijd
+>vervang je opstelling met eentje die niet aangetast kan zijn
+
+- Het ledje gaat niet aan omdat een sterke magneet ervoor zorgt dat de electriciteit niet goed door je instelling kan lopen
+>controleer voor eventuele magneten in je opstelling
+>verwijder al het magnetisch materiaal van je opstelling
+
+- Het ledje gaat niet aan omdat een klasgenoot met pennen loopt te gooien, en een van de pennen heeft jou opstelling geraakt en gesloopt
+>controleer voor eventuele pennenn die jou opstelling hebben kunnen slopen
+>vervang je opstelling met eentje die niet geraakt is door de pennen
+
+- Het ledje gaat niet aan omdat door een schrijffout in je code het ledje gelijk aan en uit word gezet
+>controlleer je code of het ledje alleen word uitgezet als de lamp niet ingedrukt is
+
+- Het ledje gaat niet aan omdat de verkeerde arduino is geselecteerd in het com menu
+>controlleer of de juiste arduino is geselecteerd en selecteer de goede als dit niet zo is
+
+- Het ledje gaat niet aan omdat de reset knop op je arduino constant word ingedrukt
+>controleer of de knop in te drukken is
+>controleer of er iets op de knop ligt
+
+- Het ledje gaat niet aan omdat er niet genoeg stroom word gegeven
+>Controleer of de + kabel aan de 5v pin is aangesloten
+>vervang je arduino
+
+- Het ledje gaat niet aan omdat er geen led lampje aanwezig is
+>controleer of het ledje aanwezig is in de opstelling
+>pak een ledje
+
+- Het ledje gaat niet aan omdat een manderijn op de opstelling voor kortsluiting zorgt
+>controleer voor eventuele manderijnen
+>verwijder de manderijn van de opstelling
+
+- Het ledje gaat niet aan omdat er geen plasticje op het knopje zit
+>controleer of het knopje een plasticje heeft
+>vervang het knopje
+
+- Het ledje gaat niet aan omdat de manderijn die je als weerstand gebruikt een te hoge weerstand heeft
+>controleer met een multimeter de weerstand van de manderijn
+>vervang de manderijn met eentje met een lagere weerstand
+
+- Het ledje gaat niet aan omdat er een breuk in het weerstandje zit
+>controleer het weerstandje of er een breuk in zit
+>vervang het weerstandje
+
+- Het ledje gaat niet aan omdat iemand je laptop afsluit terwijl je bezig bent
+>controleer of je laptop nog aanstaat
+>zet je laptop opnieuw aan
+
+- Het ledje gaat niet aan omdat er niet genoeg stroom door je usb poort heen gaat door een defect
+>controleer andere usb poorten of die wel werken
+>vervang je usb poort
+
+- Het ledje gaat niet aan omdat een haar van je hoofd voor kortsluiting op je bord zorgt
+>controleer het bord voor eventuele haren op je opstelling
+>verwijder alle haren van je opstelling
+
+- Het ledje gaat niet aan omdat je te stoned bent om de juiste opstelling te maken
+>herinner wat je in de ochtend hebt gedaan
+>word niet meer stoned
+
+- Het ledje gaat niet aan omdat een klasgenoot met een schaar een kabel hebt doorgeknipt
+>controleer je kabels voor eventuele doorgeknipte stukjes
+>vervang je geknipte kabels
+
+- Het ledje gaat niet aan omdat een klasgenoot een kabel heeft lostgetrokken
+>controleer voor eventuele losse kabels
+>maak alle losse kabels vast
+
+- Het ledje gaat niet aan omdat het weerstandje het verkeerde kleurcode heeft waardoor de weerstand niet meer werkt
+>controleer andere weerstandjes met dezelfde kleurcode of die een andere weerstand heeft
+>vervang het weerstandje
+
+- Het ledje gaat niet aan omdat je een hardstilstand krijgt door middel van een schok
+>check of je dood bent
+>rip

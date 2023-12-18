@@ -43,14 +43,14 @@ namespace Pokemon_Battle_Simulator
                 if (DefeatedPokemons[0].Count == 6)
                 {
                     Console.WriteLine();
-                    Utils.SlowWrite($"{trainer1.getName()} has lost the battle and is now gay!");
+                    Utils.SlowWrite($"{trainer1.getName()} has lost the battle and is now dead!");
                     Utils.SlowWrite($"{trainer2.getName()} has won the battle!");
                     finished = true;
                     continue;
                 }
                 if (DefeatedPokemons[1].Count == 6)
                 {
-                    Utils.SlowWrite($"{trainer2.getName()} has lost the battle and is now gay!");
+                    Utils.SlowWrite($"{trainer2.getName()} has lost the battle and is now dead!");
                     Utils.SlowWrite($"{trainer1.getName()} has won the battle!");
                     finished = true;
                     continue;

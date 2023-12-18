@@ -1,0 +1,73 @@
+BSN,Province,ChosenParty
+123-45-6789,North Holland,PVV
+234-56-7890,South Holland,PvDA
+345-67-8901,Utrecht,CU
+456-78-9012,Gelderland,D66
+567-89-0123,North Brabant,VVD
+678-90-1234,Limburg,FD
+789-01-2345,Overijssel,PVV
+890-12-3456,Groningen,PvDA
+901-23-4567,Flevoland,CU
+012-34-5678,Zeeland,D66
+123-45-6789,Friesland,VVD
+234-56-7890,Drenthe,FD
+345-67-8901,Overijssel,PVV
+456-78-9012,North Brabant,PvDA
+567-89-0123,Limburg,CU
+678-90-1234,South Holland,D66
+789-01-2345,Gelderland,VVD
+890-12-3456,Flevoland,FD
+901-23-4567,Zeeland,PVV
+012-34-5678,Utrecht,PvDA
+123-45-6789,Drenthe,CU
+234-56-7890,Groningen,D66
+345-67-8901,Friesland,VVD
+456-78-9012,North Brabant,FD
+567-89-0123,South Holland,PVV
+678-90-1234,Utrecht,PvDA
+789-01-2345,Flevoland,CU
+890-12-3456,Gelderland,D66
+901-23-4567,Limburg,VVD
+012-34-5678,Groningen,FD
+123-45-6789,Overijssel,PVV
+234-56-7890,Zeeland,PvDA
+345-67-8901,Friesland,CU
+456-78-9012,North Brabant,D66
+567-89-0123,South Holland,VVD
+678-90-1234,Limburg,FD
+789-01-2345,Flevoland,PVV
+890-12-3456,Gelderland,PvDA
+901-23-4567,Utrecht,CU
+012-34-5678,Drenthe,D66
+123-45-6789,Groningen,VVD
+234-56-7890,North Brabant,FD
+345-67-8901,South Holland,PVV
+456-78-9012,Limburg,PvDA
+567-89-0123,Flevoland,CU
+678-90-1234,Overijssel,D66
+789-01-2345,Zeeland,VVD
+890-12-3456,Friesland,FD
+901-23-4567,Utrecht,PVV
+012-34-5678,Gelderland,PvDA
+123-45-6789,Drenthe,CU
+234-56-7890,North Brabant,D66
+345-67-8901,South Holland,VVD
+456-78-9012,Limburg,FD
+567-89-0123,Groningen,PVV
+678-90-1234,Flevoland,PvDA
+789-01-2345,Overijssel,CU
+890-12-3456,Zeeland,D66
+901-23-4567,Friesland,VVD
+012-34-5678,Utrecht,FD
+123-45-6789,North Brabant,PVV
+234-56-7890,South Holland,PvDA
+345-67-8901,Limburg,CU
+456-78-9012,Flevoland,D66
+567-89-0123,Gelderland,VVD
+678-90-1234,Friesland,FD
+789-01-2345,Utrecht,PVV
+890-12-3456,Drenthe,PvDA
+901-23-4567,Zeeland,CU
+012-34-5678,Overijssel,D66
+123-45-6789,Groningen,VVD
+234-56-7890,South Holland,FD

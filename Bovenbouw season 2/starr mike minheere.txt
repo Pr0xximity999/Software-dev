@@ -1,0 +1,11 @@
+Feedback 10/10/2023
+
+Situatie: Mike heeft mijn code nagekeken en tips gegeven wat er beter kan
+
+Taak: Ik moest mike mijn code laten zien en uitleggen hoe het werkte
+
+Actie: Ik moest naar de feedback van mike luisteren en mijn code daarop verbeteren
+
+Resultaat: Er was niks om te verbeteren, alleen meer comments in mijn code zetten
+
+Reflectie: Voortaan meer comments in code zetten om zo een duidelijke uitleg te geven
